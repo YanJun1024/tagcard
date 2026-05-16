@@ -1,8 +1,7 @@
 import { ExpoConfig, ConfigContext } from 'expo/config';
 
-const appName = process.env.COZE_PROJECT_NAME || process.env.EXPO_PUBLIC_COZE_PROJECT_NAME || '应用';
-const projectId = process.env.COZE_PROJECT_ID || process.env.EXPO_PUBLIC_COZE_PROJECT_ID;
-const slugAppName = projectId ? `app${projectId}` : 'myapp';
+const appName = '单词记忆助手';
+const slugAppName = 'myapp';
 
 export default ({ config }: ConfigContext): ExpoConfig => {
   return {
@@ -23,7 +22,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": `com.anonymous.x${projectId || '0'}`
+      "package": "com.anonymous.myapp"
     },
     "web": {
       "bundler": "metro",
